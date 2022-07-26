@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+main{
+    background-image: url("../public/cat-bg.png");
+    background-size: 100%;
+    background-repeat: repeat-y;
+    color: #fff;
+    min-height: 100vh;
+    z-index: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main::before{
+    background-color: rgba(15, 15, 15, 0.95);
+    display: block;
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main > div{
+    position: relative;
+    min-height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 3rem 0 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.418);
+    width: 250px;
+    margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+main header h2{
+    text-align: center;
+    padding: .5rem;
+    font-size: 54px!important;
+    font-family: 'Edu NSW ACT Foundation', cursive!important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main .Title{
+    text-align: center;
+    color: #fff;
+    margin: 1rem 0 5rem;
+    font-size: 20px!important;
+    font-family: 'Edu NSW ACT Foundation', cursive!important;
+}
+
+main .content{
+    background-color: rgba(15, 15, 15, 0.9);    
+    max-width: 750px;
+    margin: 0 auto;
+    position: relative;
+}
+
+main .content .tabs{
+    position: absolute;
+    top: -45px;
+    width: 100%;
+}
+
+main .content .tabs button{
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+main .content .tabs button[aria-selected=true]{
+    background-color: #fff;
+    color: #0f0f0f;
+}
+
+main .content .busca{
+    justify-content: space-evenly;
+}
+
+main .content .busca > div,
+main .content .busca button{
+    width: 100%;
+    margin: 1rem .5rem;
+}
+
+main .content .busca button{
+    color: #0f0f0f;
+    font-weight: bold;
+}
+
+main .content .busca input::placeholder{
+    color: #fff;
+}
+
+main .content ul{
+    margin-top: 1.5rem;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+main .content ul li {
+    counter-increment: index; 
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+main .content ul li:not(:first-child){
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+main .content ul li span{
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: .8rem;
+    background-image: linear-gradient(to bottom, aquamarine, orangered);
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+main .content ul li p{
+    color: #ffffffdb;
+    font-size: 16px!important;
+    text-align: justify;
+    width: 100%;
 }
