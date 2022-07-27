@@ -6,15 +6,19 @@ type Props = {
     index: number;
     fato: fatosData;
 };
+
 export const Card = (props: Props) => {
+    // Função que formata o numero da listagem para colocar o "0" do 1-9
     const numeroFato = (i: number) => {
         if(i < 10)return '0' + i
         else return i; 
     }
+
+    // Main return
     return (
         <li>
             <span>{numeroFato(props.index + 1)}</span>
-            <p>{props.fato.fact}</p>
+            <p>{props.fato.fact} <small>tamanho: {props.fato.length}</small></p>
         </li>
     );
 };
