@@ -31,7 +31,6 @@ export const Busca = (props: Props) => {
         const fatosFiltrados2: fatosData[] = [];
 
         if(_fatos && props.fatosFiltrados){
-            console.log(props.fatosFiltrados != _fatos);
             if(props.fatosFiltrados != _fatos){
                 props.fatosFiltrados.forEach((f)=>{
                     fatosFiltrados1.push(f);
@@ -43,7 +42,7 @@ export const Busca = (props: Props) => {
             if(busca?.factSize != undefined && busca?.factSize > 0  ){
                 const f = _fatos.find((f) => f.length == busca?.factSize && !fatosFiltrados1.find((f2) => f2.fact == f.fact));
                 if(f){
-                    fatosFiltrados1.unshift(f);
+                    fatosFiltrados1.push(f);
                     return fatosFiltrados1;
                 }else{
                     toast({
@@ -53,12 +52,7 @@ export const Busca = (props: Props) => {
                     })
                     return fatosFiltrados1;
                 }
-            } else{
-                toast({
-                    title: 'Digite algum valor valido',
-                    status: 'error',
-                    isClosable: true
-                })
+            } else {
                 return fatosFiltrados1;
             }
         }else if(props.tipo == 2){
@@ -80,13 +74,13 @@ export const Busca = (props: Props) => {
             // Caso não tenha nenhum dos 2
             return _fatos;
         }
-        return [];
+        return _fatos;
     }
 
     // Função que define os fatos filtradas no momento que a aplicação é carregada como todas os fatos possiveis
     useEffect(() => {
-        props.handler(filtrarFatos(props.fatos))
-    },[])
+        props.fatos && props.handler(filtrarFatos(props.fatos))
+    },[props.fatos])
     
     // Main return
     return (
@@ -104,7 +98,7 @@ export const Busca = (props: Props) => {
             <Box>
                 <NumberInput max={255}>
                     <NumberInputField 
-                        placeholder={'Number of facts'} 
+                        placeholder={'Number of facts (0-100)'} 
                         name='factsNumber' 
                         onChange={(e) => handleSearch(e)}
                     />

@@ -18,7 +18,7 @@ export const Card = (props: Props) => {
     return (
         <li>
             <span>{numeroFato(props.index + 1)}</span>
-            <p>{props.fato.fact} <small>tamanho: {props.fato.length}</small></p>
+            <p>{props.fato.fact}</p>
         </li>
     );
 };

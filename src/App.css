@@ -91,6 +91,7 @@ main .content .busca button{
 
 main .content .busca input::placeholder{
     color: #fff;
+    font-size: 14px;
 }
 
 main .content ul{
@@ -125,6 +126,64 @@ main .content ul li span{
 main .content ul li p{
     color: #ffffffdb;
     font-size: 16px!important;
-    text-align: justify;
     width: 100%;
+}
+
+@media(max-width: 768px){
+    main header img{
+        width: 100px!important;
+        height: 100px!important;
+    }
+    main header h2{
+        font-size: 40px!important;
+    }
+    main .Title{
+        font-size: 16px!important;
+    }
+    main .content .busca{
+        flex-direction: column;
+    }
+    main .content .busca > div, main .content .busca button{
+        margin: .4rem;
+    }
+    main .content .tabs button{
+        font-size: 16px;;
+    }
+
+    
+    main .content ul li{
+        border-top: unset!important;
+        background-color: rgba(255, 255, 255, 0.05);
+        margin: 1.5rem 0;
+        padding: 1rem;
+        border-radius: 5px;
+        position: relative;
+    }
+    main .content ul li span{
+        position: absolute!important;
+        left: -8px;
+        top: -11px;
+        display: block;
+        position: relative;
+        z-index: 1;
+        display: block;
+        font-size: 18px!important;
+    }
+    main .content ul li::before{
+        display: block;
+        content: '';
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: rgb(14 14 14);
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        z-index: 0;
+        border: 3px solid #1b1b1b;
+    }
+    main .content ul li p{
+        font-size: 13px!important;
+        text-align: left;
+    }
 }

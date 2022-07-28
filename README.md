@@ -3,8 +3,8 @@
 </h1>
 
 Este projeto tem como objetivo disponibilizar ao usuário uma listagem de fatos e curiosidades sobre animais domésticos, em específico gatos de estimação. A partir disto, ele poderá interagir filtrando e buscando os fatos de duas formas distintas: <br/>
-- Na primeira opção ele poderá adicionar fato por fato, pesquisando através do número de carácteres, até que não tenha mais nenhum fato disponivel com aquela quantidade.
-- Na segunda forma, ele além de poder filtrar através do número de caracteres ele também terá a opção de escolher N quantidade de fatos em uma lista pronta de fatos já mostrada na tela.
+- 🐈 Na primeira opção, o usuario recebe uma lista vazia de fatos e poderá adicionar fato por fato, pesquisando pelo seu número de carácteres, até que não tenha mais nenhum fato disponivel com aquela quantidade.
+- 🐈‍⬛ Na segunda opção, ele além de poder filtrar através do número de caracteres ele também terá a opção de escolher N quantidade de fatos em uma lista pronta de fatos já mostrada na tela.
 
 ## Configurações Iniciais
 
