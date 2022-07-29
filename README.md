@@ -18,9 +18,12 @@ Este projeto tem como objetivo disponibilizar ao usuário uma listagem de fatos 
 
 <br/>
 
-Para utilizar o programa basta seguir o passo a passo:
+Caso seja a primeira vez que esteja rodando o projeto, basta seguir o passo a passo:
 
 <br/>
+
+- [Instalação do GIT](docs/git.md)
+- [Instalação do Node.js](docs/node.md)
 
 Clonar o repositório:
 
@@ -48,4 +51,4 @@ yarn start
 
 ## Wiki
 
-Acompanhe a documentação do projeto
+Acompanhe a [documentação](docs/listagem.md) do projeto

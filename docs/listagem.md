@@ -8,4 +8,4 @@ Como esta listagem é limitada a 10 fatos por página, são feitas 10 requisiç�
 - Em seguida é chamada uma function denominada "listagemFatos" que irá fazer um .map em todos os fatosFiltrados de ambas as listas, retornando cada uma
 um componente "card" que contem o fato e sua index.
 
-O compontente de busca é responsavel por filtrar os fatos que irão ser apresentados em ambas as listas
+O [compontente de busca](docs/busca.md) é responsavel por filtrar os fatos que irão ser apresentados em ambas as listas
