@@ -18,6 +18,10 @@ Este projeto tem como objetivo disponibilizar ao usuário uma listagem de fatos 
 
 <br/>
 
+Para utilizar o programa basta seguir o passo a passo:
+
+<br/>
+
 Clonar o repositório:
 
 ```bash

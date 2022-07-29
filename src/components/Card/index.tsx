@@ -16,7 +16,7 @@ export const Card = (props: Props) => {
 
     // Main return
     return (
-        <li>
+        <li data-testid={`fato_${props.index}`}>
             <span>{numeroFato(props.index + 1)}</span>
             <p>{props.fato.fact}</p>
         </li>

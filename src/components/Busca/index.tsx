@@ -74,7 +74,6 @@ export const Busca = (props: Props) => {
             // Caso não tenha nenhum dos 2
             return _fatos;
         }
-        return _fatos;
     }
 
     // Função que define os fatos filtradas no momento que a aplicação é carregada como todas os fatos possiveis
@@ -88,8 +87,9 @@ export const Busca = (props: Props) => {
             <Box>
                 <NumberInput>
                     <NumberInputField 
-                        placeholder={'Fact size'} 
+                        placeholder={`Fact size`} 
                         name='factSize' 
+                        data-testid={`factSize${props.tipo}`}
                         onChange={(e) => handleSearch(e)}
                     />
                 </NumberInput>
@@ -105,7 +105,7 @@ export const Busca = (props: Props) => {
                 </NumberInput>
             </Box>
             )}
-            <Button onClick={()=>{props.handler(filtrarFatos(props.fatos))}}>Buscar</Button>
+            <Button data-testid={`buscar${props.tipo}`} onClick={()=>{props.handler(filtrarFatos(props.fatos))}}>Buscar</Button>
         </Flex>
     );
 };

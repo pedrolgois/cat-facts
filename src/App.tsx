@@ -21,7 +21,7 @@ const App = () => {
         return(
             <ul>
                 {fatosFiltrados?.map((fato, index) => {
-                    return(<Card fato={fato} index={index} key={index}/>)}
+                    return(<Card fato={fato} index={index} key={index} data-testid={`fato_${index}`}/>)}
                 )}
             </ul>
         )
@@ -45,7 +45,7 @@ const App = () => {
 
     useEffect(()=>{
         fatos && setFatosFiltrados2(fatos);
-    },[fatos])
+    },[fatos, loading])
 
     // Main return
     return (
@@ -61,7 +61,6 @@ const App = () => {
                         <Tab>List 01</Tab>
                         <Tab>List 02</Tab>
                     </TabList>
-                    {!loading && fatos && (
                     <TabPanels>
                         <TabPanel>
                             <Busca 
@@ -82,7 +81,6 @@ const App = () => {
                             {listagemFatos(fatosFiltrados2 as fatosData[])}
                         </TabPanel>
                     </TabPanels>
-                    )}
                 </Tabs>
             </Container>
         </main>
