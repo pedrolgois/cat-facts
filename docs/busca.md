@@ -1,4 +1,4 @@
-# Listagem dos fatos
+# Busca e filtro
 
 O filtro dos fatos, é feito de duas formas:
 
